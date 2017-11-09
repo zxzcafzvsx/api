@@ -23,4 +23,8 @@ function rand_line($fileName, $maxLineLength = 4096) {
     }
 }
 echo rand_line("quote.txt");
+echo "{"; 
+echo "    "data": {"; 
+echo "        "Fajr": "rand_line("quote.txt")","; 
+echo "}"; 
 ?>
