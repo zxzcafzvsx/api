@@ -24,33 +24,3 @@ function rand_line($fileName, $maxLineLength = 4096) {
 }
 echo rand_line("quote.txt");
 ?>
-
-<?php
-// array
-$array = Array (
-    "0" => Array (
-        "id" => "USR1",
-        "name" => "Steve Jobs",
-        "company" => "Apple"
-    ),
-    "1" => Array (
-        "id" => "USR2",
-        "name" => "Bill Gates",
-        "company" => "Microsoft"
-    ),
-    "2" => Array (
-        "id" => "USR3",
-        "name" => "Mark Zuckerberg",
-        "company" => "Facebook"
-    )
-);
-// encode array to json
-$json = json_encode(array('data' => $array));
-// write json to file
-if (file_put_contents("data.json", $json))
-    echo "File JSON sukses dibuat...";
-else 
-    echo "Oops! Terjadi error saat membuat file JSON...";
-// data.json
-// {"data":[{"id":"USR1","name":"Steve Jobs","company":"Apple"},{"id":"USR2","name":"Bill Gates","company":"Microsoft"},{"id":"USR3","name":"Mark Zuckerberg","company":"Facebook"}]}
-?>
